@@ -1,0 +1,17 @@
+/* add custom styles */
+
+
+#quantity {
+  padding:10px;
+  width:50px;
+}
+
+button {
+  padding: 10px;
+}
+
+#select {
+  border-width: : 1px;
+  border-style: solid;
+  border-color: transparent;
+}
