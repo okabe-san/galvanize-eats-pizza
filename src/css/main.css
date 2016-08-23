@@ -1,5 +1,70 @@
-/* add custom styles */
+h1 {
+  font-size: 60px;
+}
 
+/* header */
+header {
+ background: #fff;
+}
+
+.banner {
+  height: 600px;
+  background-image: url('../banner.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.left {
+  display: flex;
+  justify-content: flex-start;
+  color: #fff;
+  background: rgba(0, 0, 0, .5);
+  padding: 20px;
+}
+
+.center, .center-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.center {
+    height: 300px;
+}
+
+.center-button > button {
+  color: #999;
+  font-size: 18px;
+  padding: 10px 30px;
+}
+
+/* main */
+main {
+  padding: 60px 100px;
+}
+
+.info {
+  display: inline-flex;
+}
+
+.three-col {
+  width: calc(100%/3);
+  padding: 0 20px;
+}
+
+.menuInfo {
+  width: 50%;
+  float: left;
+  margin-bottom: 60px;
+}
+
+.orderInfo {
+  width: 50%;
+  float: left;
+  color: green;
+}
 
 #quantity {
   padding:10px;
@@ -7,11 +72,23 @@
 }
 
 button {
+  margin: 30px 0;
   padding: 10px;
 }
 
-#select {
+.select {
+  display: inline-block;
+  padding: 5px;
   border-width: : 1px;
   border-style: solid;
   border-color: transparent;
+}
+
+/* footer */
+footer {
+  clear: both;
+  margin: 0 40px;
+  padding: 20px 40px 10px;
+  text-align: right;
+  border-top: 1px solid #999;
 }

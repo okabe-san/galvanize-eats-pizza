@@ -8,20 +8,35 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <header>
+    <header class="banner">
+      <element class="left">
+        <h3 class="flex-item">Galvanize-Eats!</h3>
+      </element>
+      <element class="center">
+        <h1 class="flex-item"> g-Food Deliverd.</h1>
+      </element>
+      <element class="center-button">
+        <button type="click" onClick="location='menu.html'" class="flex-item">Place Order</button>
+    </element>
     </header>
     <main>
-      <form>
-        <h2>Burgers:</h2>
-          <element id="select" class="menuBurgers" onclick="select(this)"></element>
-        <h2>Pizza:</h2>
-          <element id="select" class="menuPizza" onclick="select(this)"></element>
-        <h2>Quantity: </h2>
-        <input min="1" type="number" id="quantity" value="1">
-        <button type="submit">Add Item</button>
-        <section class="orderList"></section>
-      </form>
+      <article class="info">
+        <section class="three-col">
+          <h3>SHOP ONLINE</h3>
+          <p>Using our convenient web app, you'll get all the power of gFood without having to call your order in. Order in your pajamas, order 24 hours a day, order on Christmas, we're here to serve you.</p>
+        </section>
+        <section class="three-col">
+          <h3>FAST DELIVERY</h3>
+          <p>You've never seen ordering this quick. Our proprietary ordering rocket ship delivery team allows you to spend less time being hungry, and more time doing what matters most to you. We'd ask what that is, but gFood respects your privacy.</p>
+        </section><section class="three-col">
+          <h3>GREAT DEALS</h3>
+          <p>Money: You've got it, we want it. But let it never be said we're not incredibly fair! Burger sales? Check. Pizza sales? Check. Burger and pizza sales?? Check, check, check! We seriously can't stop making deals.</p>
+        </section>
+      </article>
     </main>
+    <footer>
+      <h5>Denver, Colorado</h5>
+    </footer>
     <!-- scripts -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
