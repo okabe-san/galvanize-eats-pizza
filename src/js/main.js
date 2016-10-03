@@ -3,11 +3,9 @@ $(document).ready(function () {
     type: 'GET',
     url: 'https://galvanize-eats-api.herokuapp.com/menu'
   }).done(function(data) {
-    // console.log(data);
     menuList(data);
     selectItem(data);
     addItem(data);
-    //subTotal(data);
   });
 });
 
@@ -17,7 +15,6 @@ let subTotal = 0;
 function menuList(data) {
   var menuArr = data.menu;
   for (var info in menuArr) {
-    // console.log(menuArr[info]);
     var name = menuArr[info].name;
     var value = menuArr[info].price;
     var type = menuArr[info].type;
@@ -34,7 +31,6 @@ function selectItem(data) {
     item = this.cloneNode(true);
     $(this).css('border-color', 'gray');
     $('.select').not(this).css('border-color', 'transparent');
-    // console.log(item);
   });
 }
 
@@ -58,11 +54,14 @@ function addItem(data) {
   });
 }
 
+var order = {};
 
 function orderInfo() {
-  order[name] = $('#name').val();
-  order[phone] =$('#phone').val();
-  order[address] =$('#address').val();
+  order = {
+    name: $('#name').val(),
+    phone: $('#phone').val(),
+    address: $('#address').val()
+  };
 }
 
 $('.submit').on('click', function() {
@@ -70,9 +69,12 @@ $('.submit').on('click', function() {
   $.ajax({
     type: "POST",
     url: 'https//galvanize-eats-api.herokuapp.com/order',
-    data: order
-  }).done(function(data) {
-    console.log(data);
-    alert ('Your food is on its way!');
+    data: order,
+    success: function() {
+      alert('success');
+    },
+    error: function() {
+    alert('failure');
+    }
   });
 });
